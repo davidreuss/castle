@@ -6,6 +6,8 @@ set number
 set ruler
 set nostartofline
 
+set cot+=menuone
+
 set nocompatible " Vim Rocks
 set history=100
 set undolevels=250
