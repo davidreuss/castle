@@ -6,6 +6,10 @@ set number
 set ruler
 set nostartofline
 
+set nowrap " I hate wordwrapping
+
+set autochdir " Auto change dir to current buffer
+
 set cot+=menuone
 
 set nocompatible " Vim Rocks
@@ -21,6 +25,9 @@ set viminfo+=!,h
 filetype on
 filetype plugin on
 filetype indent on
+
+" Remapping f6 to nerdtree toggle
+nmap <F6> :NERDTreeToggle<CR>
 
 " Stuff from Mikkel
 set list
@@ -54,7 +61,7 @@ set wildmode=longest,list
 set wildignore+=*.pyc,*.DS_STORE,*.db
 
 " Show me where i am editing
-set cursorline
+" set cursorline
 
 " Textformatting and layout
 set formatoptions=tcroqn

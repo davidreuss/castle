@@ -2,7 +2,7 @@
 set lines=60
 set columns=150
 
-set guifont=Consolas
+set gfn=DejaVu\ Sans\ Mono
 set guioptions=cemg
 
-colorscheme molokai
+colorscheme vylight
