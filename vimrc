@@ -69,12 +69,12 @@ set autoindent
 set smartindent
 set cindent
 set smarttab
-set textwidth=72
+set textwidth=140
 
 set nomodeline
 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set showtabline=2
 
