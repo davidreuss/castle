@@ -26,6 +26,15 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" Additional syntaxes
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+" force nerdtree to open in the right side of the screen
+
+" Open up nerdtree when launcing vim and set the active window to the main window
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
 " Remapping f6 to nerdtree toggle
 nmap <F6> :NERDTreeToggle<CR>
 
