@@ -8,8 +8,6 @@ set nostartofline
 
 set nowrap " I hate wordwrapping
 
-set autochdir " Auto change dir to current buffer
-
 set cot+=menuone
 
 set nocompatible " Vim Rocks
