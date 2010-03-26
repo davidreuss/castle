@@ -27,12 +27,6 @@ filetype indent on
 " Additional syntaxes
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
-" force nerdtree to open in the right side of the screen
-
-" Open up nerdtree when launcing vim and set the active window to the main window
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
 " Remapping f6 to nerdtree toggle
 nmap <F6> :NERDTreeToggle<CR>
 
@@ -42,7 +36,6 @@ set listchars=tab:>-,trail:-
 set scrolloff=5 " always show me the next/previous 5 lines
 set laststatus=2
 set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
-
 
 " Where to drop swp and backup files
 set backup
@@ -84,4 +77,4 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set showtabline=2
-
+set softtabstop=4
