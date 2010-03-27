@@ -24,9 +24,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Additional syntaxes
-au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-
 " Remapping f6 to nerdtree toggle
 nmap <F6> :NERDTreeToggle<CR>
 
