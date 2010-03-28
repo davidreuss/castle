@@ -27,6 +27,9 @@ filetype indent on
 " Remapping f6 to nerdtree toggle
 nmap <F6> :NERDTreeToggle<CR>
 
+" This will hopefully make supertab play nice with omnicomplete
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
 " Stuff from Mikkel
 set list
 set listchars=tab:>-,trail:-

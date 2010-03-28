@@ -11,6 +11,5 @@ let php_noShortTags=1 " Disable short PHP tags. (<? ?>)
 let php_folding=1 " Enable folding for classes and functions
 
 " Autocomplete function names etc is nice to have
-set dictionary-=$HOME/.vim/php/funclist.txt dictionary+=$HOME/.vim/php/funclist.txt
-set complete-=k complete+=k
-
+setlocal dictionary-=$HOME/.vim/php/funclist.txt dictionary+=$HOME/.vim/php/funclist.txt
+setlocal complete-=k complete+=k
