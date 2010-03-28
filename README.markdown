@@ -42,7 +42,4 @@ The following colorschemes, plugins and syntaxes can be found.
 
 ### Other stuff
 
-Additionally there is a php/funclist.txt that vimrc is adding to the VIM dictionary for a quick autocomplete functionality. Unfortunatly i
-haven't gotten omnicomplete for php working with supertab yet.
-
-Also F6 is mapped as :NERDTreeToggle
+ * F6 is mapped as :NERDTreeToggle
