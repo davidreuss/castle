@@ -9,4 +9,7 @@ alias dev="ssh hb@dev.peytz.dk"
 alias fto="ssh hb@ftonline.peytz.dk"
 
 # Source a local alias file
-source $HOME/.aliases
+if [ -f $HOME/.aliases ]
+then
+    source $HOME/.aliases
+fi
