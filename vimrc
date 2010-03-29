@@ -29,6 +29,7 @@ nmap <F6> :NERDTreeToggle<CR>
 
 " This will hopefully make supertab play nice with omnicomplete
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
 
 " Stuff from Mikkel
 set list
@@ -44,9 +45,13 @@ set directory=$HOME/.vim/temp
 
 " Autocompletion for commands
 set wildmenu
+set wildmode=list:longest,full
 set ruler
 set lazyredraw
 set backspace=2
+
+" Dont fucking fold my code, i want to see it gd.
+set nofoldenable
 
 " Dont fuck my hears
 set noerrorbells
