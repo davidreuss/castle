@@ -1,0 +1,9 @@
+ForwardAgent yes
+
+Host dev
+    User hb
+    HostName dev.peytz.dk
+
+Host fto
+    User hb
+    HostName ftonline.peytz.dk
