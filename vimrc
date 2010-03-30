@@ -28,8 +28,7 @@ filetype indent on
 nmap <F6> :NERDTreeToggle<CR>
 
 " This will hopefully make supertab play nice with omnicomplete
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType="context"
 
 " Stuff from Mikkel
 set list
