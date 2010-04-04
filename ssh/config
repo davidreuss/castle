@@ -7,3 +7,11 @@ Host dev
 Host fto
     User hb
     HostName ftonline.peytz.dk
+
+Host jumpgate
+    User hb
+    HostName jumpgate.dk
+
+Host debian
+    User hb
+    HostName debian.vm
