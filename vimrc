@@ -1,6 +1,9 @@
 " Autoreload
 autocmd! bufwritepost .vimrc source % " Always reload when .vimrc is edited 
 
+filetype off 
+call pathogen#runtime_append_all_bundles()
+
 syntax on " ALWAYS GD
 set number
 set ruler
