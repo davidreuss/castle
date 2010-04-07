@@ -9,4 +9,4 @@ set guioptions=cemg
 let g:sienna_style = 'dark'
 " let g:sienna_style = 'light'
 
-colorscheme sienna
+colorscheme vividchalk
