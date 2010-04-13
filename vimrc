@@ -12,7 +12,6 @@ set nostartofline
 set nowrap " I hate wordwrapping
 
 set cot+=menuone
-
 set nocompatible " Vim Rocks
 set history=100
 set undolevels=250
@@ -76,8 +75,7 @@ set autoindent
 set smartindent
 set cindent
 set smarttab
-set textwidth=140
-
+set textwidth=0
 set nomodeline
 
 set tabstop=4

@@ -6,7 +6,4 @@ set columns=150
 set gfn=Droid\ Sans\ Mono:h12.00
 set guioptions=cemg
 
-let g:sienna_style = 'dark'
-" let g:sienna_style = 'light'
-
-colorscheme vividchalk
+colorscheme eclipse

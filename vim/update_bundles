@@ -6,12 +6,10 @@ git_bundles = [
   "git://github.com/tpope/vim-markdown.git",
   "git://github.com/tsaleh/vim-supertab.git",
   "git://github.com/c9s/hypergit.vim",
-  "git://github.com/tpope/vim-vividchalk",
 ]
 
 vim_org_scripts = [
   ["IndexedSearch", "7062",  "plugin"],
-  ["gist",          "12732", "plugin"],
   ["autoclose",     "9223",  "plugin"],
 ]
 
