@@ -5,11 +5,17 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 
 syntax on " ALWAYS GD
+
 set number
 set ruler
 set nostartofline
 
 set nowrap " I hate wordwrapping
+
+set completeopt=longest
+
+" Set up neocomplcache
+let g:NeoComplCache_EnableAtStartup=1
 
 set cot+=menuone
 set nocompatible " Vim Rocks
@@ -25,9 +31,6 @@ set viminfo+=!,h
 filetype on
 filetype plugin on
 filetype indent on
-
-" Remapping f6 to nerdtree toggle
-nmap <F6> :NERDTreeToggle<CR>
 
 " This will hopefully make supertab play nice with omnicomplete
 let g:SuperTabDefaultCompletionType="context"
