@@ -14,9 +14,6 @@ set nowrap " I hate wordwrapping
 
 set completeopt=longest
 
-" Set up neocomplcache
-let g:NeoComplCache_EnableAtStartup=1
-
 set cot+=menuone
 set nocompatible " Vim Rocks
 set history=100
@@ -53,9 +50,6 @@ set wildmode=list:longest,full
 set ruler
 set lazyredraw
 set backspace=2
-
-" Dont fucking fold my code, i want to see it gd.
-set nofoldenable
 
 " Dont fuck my hears
 set noerrorbells

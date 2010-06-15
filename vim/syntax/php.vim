@@ -2,7 +2,7 @@
 " Language: PHP 5.3 & up
 " Maintainer: Paul Garvin <paul@paulgarvin.net>
 " Last Change:  April 2, 2010
-" URL: 
+" URL: http://github.com/paulyg/Vim-PHP-Stuff.git
 "
 " Former Maintainer:  Peter Hodge <toomuchphp-vim@yahoo.com>
 " Former URL: http://www.vim.org/scripts/script.php?script_id=1571
