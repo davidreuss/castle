@@ -1,6 +1,5 @@
 vim/backup/*
 vim/temp/*
-vim/bundle/*
 vim/.VimballRecord
 vim/.netrwhist
 .DS_Store

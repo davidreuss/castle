@@ -1,82 +1,64 @@
-" Autoreload
-autocmd! bufwritepost .vimrc source % " Always reload when .vimrc is edited 
+filetype off
 
-filetype off 
+call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-syntax on " ALWAYS GD
+set nocompatible " Behave more like VIM
 
-set number
-set ruler
-set nostartofline
+syntax on
 
-set nowrap " I hate wordwrapping
-
-set completeopt=longest
-
-set cot+=menuone
-set nocompatible " Vim Rocks
-set history=100
-set undolevels=250
-set noconfirm
-set ffs=unix,dos,mac
-set magic
-set iskeyword+=_,$,@,%,#,-
-set viminfo+=!,h
-
-" Allows us to have seperate configurations per language
 filetype on
 filetype plugin on
 filetype indent on
 
-" This will hopefully make supertab play nice with omnicomplete
-let g:SuperTabDefaultCompletionType="context"
+set number
+set ruler
+set nostartofline
+set nowrap " Word wrapping die
 
-" Stuff from Mikkel
-set list
-set listchars=tab:>-,trail:-
-set scrolloff=5 " always show me the next/previous 5 lines
+set lazyredraw
+
+set history=1000 " History rocks
+
+set cmdheight=2 " Two lines for commands please
+set showcmd " Display incomple commands
+set showmode " Nice to know the current editing mode
+set visualbell
+set noerrorbells
+set lazyredraw
 set laststatus=2
+set nofoldenable
+
 set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
 
-" Where to drop swp and backup files
-set backup
+set backup " Done create .swp files everywhere
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/temp
 
-" Autocompletion for commands
+" Hidden chars
+set list
+set listchars=tab:>-,trail:-
+
+" Commands autocomplete
 set wildmenu
 set wildmode=list:longest,full
-set ruler
-set lazyredraw
-set backspace=2
 
-" Dont fuck my hears
-set noerrorbells
-set visualbell
-set showcmd
-
-" DONT FUCKING JUMP
-set noshowmatch
-set ignorecase
-set smartcase
-set wildmode=longest,list
-set wildignore+=*.pyc,*.DS_STORE,*.db
-
-" Show me where i am editing
-" set cursorline
-
-" Textformatting and layout
-set formatoptions=tcroqn
-set autoindent
-set smartindent
-set cindent
-set smarttab
-set textwidth=0
-set nomodeline
-
+" Use spaces instead of tabs for indention
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set showtabline=2
 set softtabstop=4
+
+" Various textformatting
+set scrolloff=5
+set hlsearch
+set backspace=2
+set noshowmatch
+set ignorecase
+set smartcase
+set autoindent
+set smartindent
+set smarttab
+set textwidth=0
+set nomodeline

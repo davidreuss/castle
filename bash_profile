@@ -5,7 +5,7 @@ set -o vi
 export PS1='\[\033[0;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
 
 # Set the right path to include /usr/local/sbin
-export PATH=/usr/local/sbin:/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/lib/php:/opt/local/bin:/opt/local/sbin:$PATH
 
 # bash autocomplete for os x
 if [ -f /usr/local/etc/bash_completion ]; then
