@@ -2,4 +2,6 @@
 set gfn=Droid\ Sans\ Mono:h12.00
 set guioptions=cemg
 
-colorscheme silence
+colorscheme moria
+set background=dark
+set transparency=5

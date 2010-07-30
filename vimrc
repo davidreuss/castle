@@ -20,6 +20,10 @@ set lazyredraw
 
 set history=1000 " History rocks
 
+" Let supertab decide the best autocomplete function but default to omni
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
+
 set cmdheight=2 " Two lines for commands please
 set showcmd " Display incomple commands
 set showmode " Nice to know the current editing mode
