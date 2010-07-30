@@ -33,7 +33,7 @@ set lazyredraw
 set laststatus=2
 set nofoldenable
 
-set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
+set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %{fugitive#statusline()}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
 
 set backup " Done create .swp files everywhere
 set backupdir=$HOME/.vim/backup
