@@ -19,3 +19,9 @@
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
+[submodule "vim/bundle/vim-bufexplorer"]
+	path = vim/bundle/vim-bufexplorer
+	url = git://github.com/edsono/vim-bufexplorer.git
+[submodule "vim/bundle/vimomni.vim"]
+	path = vim/bundle/vimomni.vim
+	url = git://github.com/c9s/vimomni.vim.git
