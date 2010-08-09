@@ -1,5 +1,5 @@
 # Make terminal bash behave like VI
-set -o vi
+# set -o vi
 
 # Colors
 export PS1='\[\033[0;35m\]\h\[\033[0;33m\] \w\[\033[00m\]: '
@@ -16,3 +16,9 @@ fi
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
     source /usr/local/git/contrib/completion/git-completion.bash
 fi
+
+if [ -f $HOME/.rvm/scripts/rvm ]; then
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+fi
+
+export CLICOLOR=1

@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vimomni.vim"]
 	path = vim/bundle/vimomni.vim
 	url = git://github.com/c9s/vimomni.vim.git
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git

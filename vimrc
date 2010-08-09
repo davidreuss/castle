@@ -32,6 +32,7 @@ set noerrorbells
 set lazyredraw
 set laststatus=2
 set nofoldenable
+set nowrap
 
 set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %{fugitive#statusline()}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
 
