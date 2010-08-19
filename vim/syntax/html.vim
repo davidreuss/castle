@@ -59,12 +59,12 @@ syn keyword htmlTagName contained abbr acronym bdo button col label
 syn keyword htmlTagName contained colgroup del fieldset iframe ins legend
 syn keyword htmlTagName contained object optgroup q s tbody tfoot thead
 
-" new html 5.0 tags
-syn keyword htmlTagName contained article footer header nav section aside details hgroup
-syn keyword htmlTagName contained output progress rp rt ruby source summary
-syn keyword htmlTagName contained time meter
-syn keyword htmlTagName contained audio video canvas embed figure figcaption
-syn keyword htmlTagName contained command datalist keygen mark
+" HTML 5 tags
+syn keyword htmlTagName contained article aside audio bb canvas command datagrid
+syn keyword htmlTagName contained datalist details dialog embed figure footer
+syn keyword htmlTagName contained header hgroup keygen mark meter nav output
+syn keyword htmlTagName contained progress time ruby rt rp section time video
+syn keyword htmlTagName contained source figcaption
 
 
 " legal arg names

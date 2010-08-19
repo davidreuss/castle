@@ -1,8 +1,3 @@
-require 'rubygems'
-require 'bundler'
-Bundler.setup
-require 'rspec/core/rake_task'
-
 def bail_on_failure
   exitstatus = $?.exitstatus
   if exitstatus != 0
@@ -13,8 +8,9 @@ end
 task :default => :spec
 
 desc 'Run specs'
-RSpec::Core::RakeTask.new do |t|
-  t.pattern = './spec/**/*_spec.rb'
+task :spec do
+  system 'bin/rspec spec'
+  bail_on_failure
 end
 
 desc 'Create vimball archive'
@@ -65,22 +61,6 @@ task :check_tag do
   system 'git describe --exact-match HEAD 2> /dev/null'
   if $?.exitstatus != 0
     puts 'warning: current HEAD is not tagged'
-  end
-end
-
-namespace :readme do
-  desc 'Check that README.txt is up-to-date ("rake readme:update" needed)'
-  task :check do
-     system 'diff -q doc/command-t.txt README.txt'
-     if $?.exitstatus != 0
-       puts 'warning: README.txt is not up-to-date'
-     end
-  end
-
-  desc 'Copy README.txt from doc/command-t.txt'
-  task :update do
-    system 'cp doc/command-t.txt README.txt'
-    puts "README.txt updated"
   end
 end
 
