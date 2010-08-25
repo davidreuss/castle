@@ -28,3 +28,6 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/PHP-Indenting-for-Vim"]
+	path = vim/bundle/PHP-Indenting-for-Vim
+	url = http://github.com/2072/PHP-Indenting-for-VIm.git
