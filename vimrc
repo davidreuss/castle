@@ -19,7 +19,10 @@ set nowrap " Word wrapping die
 set lazyredraw
 
 set history=1000 " History rocks
+set autoread
 
+let mapleader=","
+let g:mapleader=","
 
 " Persistent undo
 set undofile
