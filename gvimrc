@@ -1,5 +1,5 @@
 " This font rocks as a codefont http://damieng.com/blog/2007/11/14/droid-font-family-courtesy-of-google-ascender
-set gfn=Droid\ Sans\ Mono:h11
+set gfn=Droid\ Sans\ Mono:h11.45
 "
 " set gfn=Inconsolata:h14
 " set gfn=Panic\ Sans:h11.50
