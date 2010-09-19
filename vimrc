@@ -35,9 +35,8 @@ let g:SuperTabDefaultCompletionType = "context"
 set cmdheight=2 " Two lines for commands please
 set showcmd " Display incomple commands
 set showmode " Nice to know the current editing mode
-set visualbell
 set noerrorbells
-set lazyredraw
+set visualbell
 set laststatus=2
 set nofoldenable
 set nowrap
@@ -72,6 +71,7 @@ set ignorecase
 set smartcase
 set autoindent
 set smartindent
+set cindent
 set smarttab
 set textwidth=0
 set nomodeline
