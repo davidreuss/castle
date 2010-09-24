@@ -49,7 +49,8 @@ set directory=$HOME/.vim/temp
 
 " Hidden chars
 set list
-set listchars=tab:>-,trail:-
+" set listchars=tab:>-,trail:-
+set listchars=tab:▸\ ,eol:¬
 
 " Commands autocomplete
 set wildmenu

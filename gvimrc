@@ -8,4 +8,6 @@ set guioptions-=T
 
 " colorscheme topfunky-light
 " colorscheme tutticolori
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme molokai
+" colorscheme zephyr
