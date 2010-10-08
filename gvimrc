@@ -6,6 +6,8 @@ set gfn=Droid\ Sans\ Mono:h11.45
 set guioptions=cemg
 set guioptions-=T
 
+set listchars=tab:▸\ ,eol:¬
+
 " colorscheme topfunky-light
 " colorscheme tutticolori
 " colorscheme jellybeans
