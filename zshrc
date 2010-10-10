@@ -28,7 +28,7 @@ fi
 
 
 # Propmt layout
-export PROMPT="%B[%{$fg[red]%}%n%{$reset_color%}%b@%B%{$fg[cyan]%}%m%b%{$reset_color%}:%~%B]%b "
+export PROMPT="$fg[cyan]%}%m%b%{$reset_color%}:%~ $ "
 
 # Setup VIM as my favored editor for commit logs etc.
 export EDITOR="vim"
