@@ -21,14 +21,12 @@ HISTSIZE=10000
 SAVEHIST=1000
 
 # Prompt layout
-PROMPT="%{$fg[cyan]%}%m%b %{$reset_color%}%~ $ "
+PROMPT="%{$fg[cyan]%}%m%b %{$reset_color%}%~: "
 RPROMPT=""
 
 # Export options.
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
-# Include path
 
 # We like vim
 export EDITOR="vim"
