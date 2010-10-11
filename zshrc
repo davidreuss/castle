@@ -31,13 +31,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # We like vim
 export EDITOR="vim"
 
-# We like mvim even more if we are on osx (Darwin)
-case `uname -s` in 
-    'Darwin')
-        # MacVim
-        export EDITOR="mvim"
-esac
-
 # Last but not least load a .zshlocal if exists for local overrides
 if [ -f "$HOME/.zshlocal" ]; then
     source "$HOME/.zshlocal"
