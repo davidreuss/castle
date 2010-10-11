@@ -44,3 +44,13 @@ case `uname -s` in
         # /usr/local/bin for Homebrew stuff
         export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 esac
+
+# Add ~/.zsh/functions to $fpath and autoload the found functions.
+if [ -d $HOME"/.zsh/functions" ]; then
+   #fpath="$fpath $HOME/.zsh/functions" 
+fi
+
+# Last but not least load a .zshlocal if exists for local overrides
+if [ -f "$HOME/.zshlocal" ]; then
+    source "$HOME/.zshlocal"
+fi
