@@ -24,6 +24,7 @@ setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
 # Prompt layout
 PROMPT="%{$fg[cyan]%}%m%b %{$reset_color%}%~ $ "
+RPROMPT=""
 
 # Export options.
 export CLICOLOR=1
