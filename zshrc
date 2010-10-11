@@ -9,18 +9,16 @@ zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character t
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=** r:|=**'
 
 # zsh options
-setopt COMPLETE_IN_WORD
-setopt ALWAYS_TO_END
-setopt AUTO_MENU
+setopt complete_in_word always_to_end auto_menu
+setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
-unsetopt MENU_COMPLETE
+# zsh unset
+unsetopt menu_complete 
 
 # History
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
-
-setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
 # Prompt layout
 PROMPT="%{$fg[cyan]%}%m%b %{$reset_color%}%~ $ "
@@ -39,16 +37,8 @@ export EDITOR="vim"
 case `uname -s` in 
     'Darwin')
         # MacVim
-        export EDITOR="mvim -f"
-
-        # /usr/local/bin for Homebrew stuff
-        export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+        export EDITOR="mvim"
 esac
-
-# Add ~/.zsh/functions to $fpath and autoload the found functions.
-if [ -d $HOME"/.zsh/functions" ]; then
-   #fpath="$fpath $HOME/.zsh/functions" 
-fi
 
 # Last but not least load a .zshlocal if exists for local overrides
 if [ -f "$HOME/.zshlocal" ]; then
