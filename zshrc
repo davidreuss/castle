@@ -1,15 +1,21 @@
 # Load modules
 autoload -U colors && colors
 autoload -Uz compinit && compinit
+autoload -Uz vcs_info && vcs_info
 
 # Make autocompletion be case insensitive
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=** r:|=**'
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=** r:|=**' # Case insensitive completion.
+
+# vcs_info styling
+zstyle ':vcs_info:*' enable git svn cvs
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 
 # zsh options
-setopt complete_in_word always_to_end auto_menu
+setopt complete_in_word always_to_end auto_menu prompt_subst
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
 # zsh unset
@@ -21,8 +27,7 @@ HISTSIZE=10000
 SAVEHIST=1000
 
 # Prompt layout
-PROMPT="%{$fg[cyan]%}%m%b %{$reset_color%}%~: "
-RPROMPT=""
+PROMPT="%{$fg[green]%}%m%{$reset_color%} %B%{$fg[cyan]%}%~%b%{$reset_color%}: ${vcs_info_msg_0_}"
 
 # Export options.
 export CLICOLOR=1
