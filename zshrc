@@ -15,7 +15,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{11}%r'
 
 # zsh options
-setopt complete_in_word always_to_end auto_menu prompt_subst
+setopt complete_in_word always_to_end prompt_subst
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
 
 # zsh unset
