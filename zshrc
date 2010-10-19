@@ -27,7 +27,7 @@ HISTSIZE=10000
 SAVEHIST=1000
 
 # Prompt layout
-PROMPT="%B%{$fg[green]%}%m%{$reset_color%}%b %B%{$fg[blue]%}%~%b%{$reset_color%}\$ "
+PROMPT="%B%{$fg[green]%}%m%{$reset_color%}%b:%B%{$fg[blue]%}%~%b%{$reset_color%}\$ "
 
 # Export options.
 export CLICOLOR=1
