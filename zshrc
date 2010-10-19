@@ -27,7 +27,7 @@ HISTSIZE=10000
 SAVEHIST=1000
 
 # Prompt layout
-PROMPT="%{$fg[green]%}%m%{$reset_color%} %B%{$fg[cyan]%}%~%b%{$reset_color%}: ${vcs_info_msg_0_}"
+PROMPT="%B%{$fg[green]%}%m%{$reset_color%}%b %B%{$fg[blue]%}%~%b%{$reset_color%}\$ "
 
 # Export options.
 export CLICOLOR=1
@@ -35,6 +35,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # We like vim
 export EDITOR="vim"
+bindkey -v
 
 # Last but not least load a .zshlocal if exists for local overrides
 if [ -f "$HOME/.zshlocal" ]; then

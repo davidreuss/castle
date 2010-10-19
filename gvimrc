@@ -11,5 +11,6 @@ set listchars=tab:▸\ ,eol:¬
 " colorscheme topfunky-light
 " colorscheme tutticolori
 " colorscheme jellybeans
-colorscheme molokai
+" colorscheme xoria256
 " colorscheme zephyr
+colorscheme myansmoke
