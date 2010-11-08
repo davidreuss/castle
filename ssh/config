@@ -15,3 +15,11 @@ Host jumpgate
 Host debian
     User hb
     HostName debian.vm
+
+Host kaffekoder
+    User hb
+    HostName kaffekoder.se
+
+Host pcotest
+    User hb
+    HostName hbtest.peytz.loc

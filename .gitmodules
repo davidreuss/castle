@@ -43,3 +43,6 @@
 [submodule "vim/bundle/scratch-vim"]
 	path = vim/bundle/scratch-vim
 	url = http://github.com/vim-scripts/scratch.vim.git
+[submodule "vim/bundle/jade.vim"]
+	path = vim/bundle/jade.vim
+	url = git://github.com/vim-scripts/jade.vim.git
