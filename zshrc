@@ -17,14 +17,20 @@ setopt ignore_eof auto_cd local_options local_traps
 # zsh unset
 unsetopt menu_complete 
 
+git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null)
+  if [[ -n $ref ]]; then
+    echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}]"
+  fi
+}
+
 # History
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
 REPORTTIME=10
 
-PROMPT="%B%{$fg[green]%}%m%{$reset_color%}%b:%B%{$fg[blue]%}%~%b%{$reset_color%}\$ "
-
+PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
 
 # Export options.
 export CLICOLOR=1
