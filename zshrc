@@ -12,7 +12,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 # zsh options
 setopt complete_in_word prompt_subst always_to_end
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
-setopt ignore_eof auto_cd local_options local_traps
+setopt ignore_eof local_options local_traps
 
 # zsh unset
 unsetopt menu_complete 

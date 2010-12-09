@@ -61,7 +61,7 @@ set shiftwidth=4
 set expandtab
 set showtabline=2
 set softtabstop=4
-set colorcolumn=100
+set colorcolumn=130
 
 " Various textformatting
 set scrolloff=5
