@@ -5,6 +5,10 @@ call pathogen#runtime_append_all_bundles()
 " No VI
 set nocompatible
 
+" 256 colors
+set t_Co=256
+colorscheme xoria256
+
 " Enable filetype plugins
 filetype on
 filetype plugin on

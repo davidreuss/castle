@@ -30,10 +30,10 @@ HISTSIZE=10000
 SAVEHIST=1000
 REPORTTIME=10
 
-PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+PROMPT='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
 
 # Export options.
-export CLICOLOR=1
+export CLICOLOR=xterm-256
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # We like vim
