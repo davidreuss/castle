@@ -3,7 +3,9 @@
 " Last Change: Dececember 6, 2010 
 " Version: 0.1.2
 "
-" cursorColumn fix from Vincent Bethoux
+" removed italics on string
+" ruby interpolation color
+" identifier color
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -17,11 +19,10 @@ let colors_name = "chance-of-storm"
 
 """""""""" General
 
-hi Normal 		guifg=#D9D9D9   guibg=#181c20 gui=none
+hi Normal 		guifg=#cacfd3   guibg=#181c20 gui=none
 
 " Vim >= 7.0
 if version >= 700
-  hi CursorColumn       guibg=#2a2e31
   hi CursorLine         guibg=#2a2e31
   hi MatchParen         guifg=magenta   guibg=black   gui=bold,italic
   hi Pmenu 		guifg=#dfeff6   guibg=#1E415E

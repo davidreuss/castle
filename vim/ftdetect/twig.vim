@@ -1,1 +1,2 @@
-au BufRead,BufNewFile *.twig set filetype=htmldjango
+au BufRead,BufNewFile *.twig.* set filetype=jinja
+au BufRead,BufNewFile *.twig set filetype=jinja
