@@ -23,3 +23,6 @@ Host kaffekoder
 Host pcotest
     User hb
     HostName hbtest.peytz.loc
+
+Host superfos
+    HostName superfos.aws.peytz.dk
