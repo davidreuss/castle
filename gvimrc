@@ -9,4 +9,4 @@ set listchars=tab:▸\ ,eol:¬
 set columns=180
 set lines=50
 
-colorscheme xoria256
+colorscheme getafe

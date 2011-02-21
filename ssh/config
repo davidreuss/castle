@@ -26,3 +26,6 @@ Host pcotest
 
 Host superfos
     HostName superfos.aws.peytz.dk
+
+Host fbi
+    HostName fbi.aws.peytz.dk
