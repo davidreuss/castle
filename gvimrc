@@ -9,4 +9,5 @@ set listchars=tab:▸\ ,eol:¬
 set columns=180
 set lines=50
 
-colorscheme getafe
+" colorscheme getafe
+colorscheme mac_classic

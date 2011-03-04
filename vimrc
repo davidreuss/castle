@@ -17,9 +17,6 @@ filetype indent on
 " Syntax highlighting
 syntax on
 
-" Auto reload .vimrc when edits
-autocmd bufwritepost .vimrc source $VIMRC
-
 " Change the leader from \ to ,
 let mapleader = ","
 let g:mapleader = ","
@@ -29,6 +26,9 @@ set backspace=indent,eol,start
 
 " Default charset for buffers are UTF-8
 set enc=utf-8
+
+" Omnicompletion.
+set omnifunc=syntaxcomplete#Complete
 
 " Search
 set incsearch
@@ -54,7 +54,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Statusline with fugitive and encoding
-set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %{fugitive#statusline()}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
+set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
 
 " Error bells
 set noerrorbells
