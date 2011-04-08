@@ -46,5 +46,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export EDITOR="vim"
 bindkey -v
 
+# Aliases
+alias slashdot='find . -name "*.DS_Store" -type f -delete && find . -name "._*" -type f -delete'
+
 # Last but not least load a .zshlocal if exists for local overrides
 [[ -f ~/.zshlocal ]] && .  ~/.zshlocal

@@ -1,5 +1,5 @@
 [ui]
-username = "Henrik Bjørnskov <henrik@bearwoods.dk>
+username = "Henrik Bjornskov <henrik@bearwoods.dk>
 
 [extensions]
 hgext.bookmarks =

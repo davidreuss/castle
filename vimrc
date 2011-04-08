@@ -7,7 +7,13 @@ set nocompatible
 
 " 256 colors
 set t_Co=256
-colorscheme xoria256
+" colorscheme xoria256
+let g:solarized_termcolors=256
+let g:solarized_visibility="high"
+let g:solarized_contrast="high"
+
+set background=dark
+colorscheme solarized
 
 " Enable filetype plugins
 filetype on
@@ -29,6 +35,9 @@ set enc=utf-8
 
 " Omnicompletion.
 set omnifunc=syntaxcomplete#Complete
+
+" Syntastic
+let g:syntastic_auto_loc_list=1
 
 " Search
 set incsearch
