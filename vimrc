@@ -7,12 +7,12 @@ set nocompatible
 
 " 256 colors
 set t_Co=256
+
 " colorscheme xoria256
 let g:solarized_termcolors=256
 let g:solarized_visibility="high"
 let g:solarized_contrast="high"
 
-set background=dark
 colorscheme solarized
 
 " Enable filetype plugins
