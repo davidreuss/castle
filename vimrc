@@ -1,6 +1,6 @@
 " Enable Pathogen
-call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " No VI
 set nocompatible
@@ -10,10 +10,9 @@ set t_Co=256
 
 " colorscheme xoria256
 let g:solarized_termcolors=256
-let g:solarized_visibility="high"
-let g:solarized_contrast="high"
 
 colorscheme solarized
+set background=dark
 
 " Enable filetype plugins
 filetype on

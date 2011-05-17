@@ -4,6 +4,10 @@ Host dev
     User hb
     HostName dev.peytz.dk
 
+Host git
+    User hb
+    HostName git.peytz.dk
+
 Host fto
     User hb
     HostName ftonline.peytz.dk

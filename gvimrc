@@ -14,7 +14,5 @@ set lines=80
 set cursorline
 
 " colorscheme getafe
-set background=dark
-let g:solarized_visibility="high"
-
 colorscheme solarized
+set background=dark
