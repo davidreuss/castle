@@ -49,5 +49,8 @@ bindkey -v
 # Aliases
 alias slashdot='find . -name "*.DS_Store" -type f -delete && find . -name "._*" -type f -delete'
 
+# Import syntax highlighting if exists
+[[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Last but not least load a .zshlocal if exists for local overrides
 [[ -f ~/.zshlocal ]] && .  ~/.zshlocal
