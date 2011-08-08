@@ -18,7 +18,7 @@ zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character t
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # zsh options
-setopt complete_in_word prompt_subst always_to_end
+setopt complete_in_word prompt_subst always_to_end correct_all
 setopt appendhistory hist_ignore_all_dups hist_ignore_space
 setopt ignore_eof local_options local_traps
 setopt auto_pushd pushd_ignore_dups pushdminus

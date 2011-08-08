@@ -8,11 +8,7 @@ set nocompatible
 " 256 colors
 set t_Co=256
 
-" colorscheme xoria256
-let g:solarized_termcolors=256
-
-colorscheme solarized
-set background=dark
+colorscheme Tomorrow-Night-Eighties
 
 " Enable filetype plugins
 filetype on

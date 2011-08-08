@@ -14,5 +14,5 @@ set lines=80
 set cursorline
 
 " colorscheme getafe
-colorscheme solarized
-set background=dark
+"colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
