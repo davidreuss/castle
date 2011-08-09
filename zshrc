@@ -4,6 +4,10 @@ autoload -U compinit && compinit
 autoload -U vcs_info
 autoload -U zmv
 
+# Autoload all custom functions
+fpath=($HOME/.zsh/functions $fpath)
+autoload -U $HOME/.zsh/functions/*(:t)
+
 # VCS
 zstyle ':vcs_info:*' enable hg git svn cvs
 zstyle ':vcs_info:*' use-simple true
@@ -37,6 +41,7 @@ SAVEHIST=1000
 REPORTTIME=10
 
 PROMPT='${vcs_info_msg_0_}[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+RPROMPT='$(git_time_since_commit)'
 
 # Export options.
 export CLICOLOR=xterm-256
