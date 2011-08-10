@@ -1,12 +1,12 @@
+# Location functions include path
+fpath=($HOME/.zsh/functions $fpath)
+
 # Load modules
 autoload -U colors && colors
 autoload -U compinit && compinit
 autoload -U vcs_info
 autoload -U zmv
-
-# Autoload all custom functions
-fpath=($HOME/.zsh/functions $fpath)
-autoload -U $HOME/.zsh/functions/*(:t)
+autoload -U git_time_since_commit
 
 # VCS
 zstyle ':vcs_info:*' enable hg git svn cvs
