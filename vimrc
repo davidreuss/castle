@@ -1,9 +1,8 @@
-" Enable Pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " No VI
 set nocompatible
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
 " 256 colors
 set t_Co=256
