@@ -2,6 +2,8 @@ vim/backup/*
 vim/temp/*
 vim/.VimballRecord
 vim/.netrwhist
+vim/bundle/*
 .DS_Store
 
 !.gitkeep
+!vim/bundle/vundle
