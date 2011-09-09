@@ -1,26 +1,26 @@
-" Tomorrow Night Eighties - Full Colour and 256 Colour
+" Tomorrow - Full Colour and 256 Colour
 " http://chriskempson.com
 "
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
-let g:colors_name = "Tomorrow-Night-Eighties"
-
 " Default GUI Colours
-let s:foreground = "cccccc"
-let s:background = "2d2d2d"
-let s:selection = "515151"
-let s:line = "393939"
-let s:comment = "999999"
-let s:red = "f2777a"
-let s:orange = "f99157"
-let s:yellow = "ffcc66"
-let s:green = "99cc99"
-let s:blue = "99cccc"
-let s:purple = "cc99cc"
+let s:foreground = "4d4d4c"
+let s:background = "ffffff"
+let s:selection = "c5cce9"
+let s:line = "e9efff"
+let s:comment = "8e908c"
+let s:red = "c82829"
+let s:orange = "f5871f"
+let s:yellow = "eab700"
+let s:green = "718c00"
+let s:blue = "4271ae"
+let s:purple = "8959a8"
 
-set background=dark
+set background=light
 hi clear
 syntax reset
+
+let g:colors_name = "Tomorrow"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
@@ -235,7 +235,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("LineNr", s:foreground, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")
-	call <SID>X("Search", "", s:selection, "")
+	call <SID>X("Search", s:background, s:yellow, "")
+	call <SID>X("TabLine", s:foreground, s:background, "reverse")
 	call <SID>X("StatusLine", s:foreground, s:background, "reverse")
 	call <SID>X("StatusLineNC", s:foreground, s:background, "reverse")
 	call <SID>X("Visual", "", s:selection, "")
@@ -281,14 +282,31 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" PHP Highlighting
 	call <SID>X("phpVarSelector", s:red, "", "")
 	call <SID>X("phpKeyword", s:purple, "", "")
+	call <SID>X("phpRepeat", s:purple, "", "")
+	call <SID>X("phpConditional", s:purple, "", "")
+	call <SID>X("phpStatement", s:purple, "", "")
+	call <SID>X("phpMemberSelector", s:foreground, "", "")
 	
 	" Ruby Highlighting
-	call <SID>X("rubySymbol", s:green, "", "")
-	call <SID>X("rubyConstant", s:yellow, "", "")
-	call <SID>X("rubyAttribute", s:blue, "", "")
+	call <SID>X("rubySymbol", s:green, "", "")	
+	call <SID>X("rubyConstant", s:yellow, "", "")	
+	call <SID>X("rubyAttribute", s:blue, "", "")	
 	call <SID>X("rubyInclude", s:blue, "", "")
-	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
+	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")	
 	call <SID>X("rubyCurlyBlock", s:orange, "", "")
+	
+	" Python Highlighting
+	call <SID>X("pythonInclude", s:purple, "", "")
+	call <SID>X("pythonStatement", s:purple, "", "")
+	call <SID>X("pythonConditional", s:purple, "", "")
+	call <SID>X("pythonFunction", s:blue, "", "")
+	
+	" JavaScript Highlighting
+	call <SID>X("javaScriptBraces", s:foreground, "", "")
+	call <SID>X("javaScriptFunction", s:purple, "", "")
+	call <SID>X("javaScriptConditional", s:purple, "", "")
+	call <SID>X("javaScriptNumber", s:orange, "", "")
+	call <SID>X("javaScriptMember", s:orange, "", "")	
 
 	" Delete Functions
 	delf <SID>X

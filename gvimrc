@@ -15,4 +15,4 @@ set cursorline
 
 " colorscheme getafe
 "colorscheme Tomorrow-Night
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow

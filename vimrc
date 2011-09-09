@@ -2,14 +2,13 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/vundle
 call vundle#rc()
 
 " System
 Bundle "tpope/vim-git"
 Bundle "tpope/vim-fugitive"
 Bundle "tpope/vim-markdown"
-Bundle "tpope/vim-ragtag"
 Bundle "msanders/snipmate.vim"
 Bundle "scrooloose/syntastic"
 Bundle "scrooloose/snipmate-snippets"
@@ -17,12 +16,14 @@ Bundle "godlygeek/tabular"
 Bundle "othree/html5.vim"
 Bundle "ervandew/supertab"
 Bundle "git://github.com/2072/PHP-Indenting-for-VIm.git"
-Bundle "vim-scripts/AutoClose"
+Bundle "sjl/gundo.vim"
+
+let g:syntastic_disabled_filestypes = ['html']
 
 " 256 colors
 set t_Co=256
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night
 
 " Enable filetype plugins
 filetype on
