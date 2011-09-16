@@ -1,37 +1,24 @@
+" Pathogen
+call pathogen#infect()
+call pathogen#helptags()
+"
 " No VI
 set nocompatible
 filetype off
-
-set rtp+=~/.vim/vundle
-call vundle#rc()
-
-" System
-Bundle "tpope/vim-git"
-Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-markdown"
-Bundle "msanders/snipmate.vim"
-Bundle "scrooloose/syntastic"
-Bundle "scrooloose/snipmate-snippets"
-Bundle "godlygeek/tabular"
-Bundle "othree/html5.vim"
-Bundle "ervandew/supertab"
-Bundle "git://github.com/2072/PHP-Indenting-for-VIm.git"
-Bundle "sjl/gundo.vim"
 
 let g:syntastic_disabled_filestypes = ['html']
 
 " 256 colors
 set t_Co=256
 
-colorscheme Tomorrow-Night
 
 " Enable filetype plugins
 filetype on
 filetype plugin on
 filetype indent on
 
-" Syntax highlighting
 syntax on
+colorscheme Tomorrow-Night
 
 " Change the leader from \ to ,
 let mapleader = ","
@@ -43,9 +30,6 @@ set backspace=indent,eol,start
 " Default charset for buffers are UTF-8
 set enc=utf-8
 
-" Omnicompletion.
-set omnifunc=syntaxcomplete#Complete
-
 " Syntastic
 let g:syntastic_auto_loc_list=1
 
@@ -55,7 +39,7 @@ set hlsearch
 set ignorecase
 
 " History Swap and backup
-set history=1000
+set history=100
 set backup
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/temp

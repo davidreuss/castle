@@ -35,8 +35,8 @@ precmd() {
 
 # History
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=1000
+HISTSIZE=100
+SAVEHIST=100
 REPORTTIME=10
 
 PROMPT='${vcs_info_msg_0_}[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
