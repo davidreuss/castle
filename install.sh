@@ -15,3 +15,6 @@ for dotfile in ${dotfiles[@]};do
         echo "> $destination already exists"
     fi
 done;
+
+
+mkdir "$DIR/vim/bundle"
