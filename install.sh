@@ -4,8 +4,13 @@ dotfiles=( "vim" "vimrc" "gvimrc" "inputrc" "zsh" "zshenv" "zshrc" )
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "> Installing dotfiles"
+echo "> Update submodules"
+git submodule sync &>/dev/null
+git submodule update --init &>/dev/null
 
+echo ""
+
+echo "> Installing dotfiles"
 for dotfile in ${dotfiles[@]};do
     source="$DIR/$dotfile"
     destination="$HOME/.$dotfile"
