@@ -10,8 +10,8 @@ for dotfile in ${dotfiles[@]};do
     source="$DIR/$dotfile"
     destination="$HOME/.$dotfile"
 
+    echo ">> Installing $source as $destination"
     if [ ! -f $destination ] && [ ! -d $destination ]; then
-        echo ">> Installing $source as $destination"
         ln -s ${source} ${destination}
     fi
 done;
