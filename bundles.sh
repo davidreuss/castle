@@ -5,6 +5,7 @@ BUNDLES[2]="git://github.com/tpope/vim-markdown.git"
 BUNDLES[3]="git://github.com/scrooloose/syntastic.git"
 BUNDLES[4]="git://github.com/othree/html5.vim.git"
 BUNDLES[5]="git://github.com/2072/PHP-Indenting-for-VIm.git"
+BUNDLES[6]="https://github.com/rodjek/vim-puppet.git"
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUNDLES_DIR="$DIR/vim/bundle"
