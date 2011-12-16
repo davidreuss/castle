@@ -8,7 +8,6 @@ BUNDLES[5]="git://github.com/2072/PHP-Indenting-for-VIm.git"
 BUNDLES[6]="https://github.com/rodjek/vim-puppet.git"
 BUNDLES[7]="https://github.com/msanders/snipmate.vim.git"
 BUNDLES[8]="https://github.com/jinfield/vim-nginx.git"
-BUNDLES[9]="https://github.com/atourino/jinja.vim.git"
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUNDLES_DIR="$DIR/vim/bundle"
