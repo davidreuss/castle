@@ -7,8 +7,8 @@ set guioptions-=T
 
 set listchars=tab:▸\ ,eol:¬
 
-set columns=105
-set lines=80
+set columns=140
+set lines=50
 
 " colorscheme getafe
 colorscheme Tomorrow-Night
