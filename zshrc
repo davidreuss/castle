@@ -1,5 +1,5 @@
-# Location functions include path
-fpath=($HOME/.zsh/functions $fpath)
+# Add ~/.zsh/functions to $fpath 
+fpath=($fpath $HOME/.zsh/completions $HOME/.zsh/functions)
 
 # Load modules
 autoload -U colors && colors
