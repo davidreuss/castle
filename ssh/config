@@ -1,6 +1,6 @@
 ForwardAgent yes
 ControlMaster auto
-ControlPath /tmp/ssh_mux_%h_%p_%r
+#ControlPath /tmp/ssh_mux_%h_%p_%r
 
 Host dev
     User hb
@@ -35,3 +35,9 @@ Host superfos
 
 Host fbi
     HostName fbi.aws.peytz.dk
+
+# SparkleShare's key
+IdentityFile /Users/Henrik/.config/sparkleshare/sparkleshare.Unknown.key
+
+# SparkleShare's key
+IdentityFile /Users/Henrik/.config/sparkleshare/sparkleshare.henrik@bjrnskov.dk.key
