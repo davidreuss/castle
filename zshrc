@@ -57,5 +57,3 @@ alias slashdot='find . -name "*.DS_Store" -type f -delete && find . -name "._*" 
 
 # Last but not least load a .zshlocal if exists for local overrides
 [[ -f ~/.zshlocal ]] && .  ~/.zshlocal
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
