@@ -11,6 +11,7 @@ BUNDLES[8]="https://github.com/jinfield/vim-nginx.git"
 BUNDLES[9]="https://github.com/ap/vim-css-color.git"
 BUNDLES[10]="https://github.com/ervandew/supertab.git"
 BUNDLES[11]="https://github.com/kien/ctrlp.vim.git"
+BUNDLES[12]="https://github.com/Lokaltog/vim-powerline.git"
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUNDLES_DIR="$DIR/vim/bundle"

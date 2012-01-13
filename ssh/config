@@ -6,38 +6,8 @@ Host dev
     User hb
     HostName dev.peytz.dk
 
-Host git
-    User hb
-    HostName git.peytz.dk
-
-Host fto
-    User hb
-    HostName ftonline.peytz.dk
-
-Host jumpgate
-    User hb
-    HostName jumpgate.dk
-
-Host debian
-    User hb
-    HostName debian.vm
-
-Host kaffekoder
-    User hb
-    HostName kaffekoder.se
-
-Host pcotest
-    User hb
-    HostName hbtest.peytz.loc
-
 Host superfos
     HostName superfos.aws.peytz.dk
 
 Host fbi
     HostName fbi.aws.peytz.dk
-
-# SparkleShare's key
-IdentityFile /Users/Henrik/.config/sparkleshare/sparkleshare.Unknown.key
-
-# SparkleShare's key
-IdentityFile /Users/Henrik/.config/sparkleshare/sparkleshare.henrik@bjrnskov.dk.key
