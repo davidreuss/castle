@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 dotfiles=( "vim" "vimrc" "gvimrc" "inputrc" "zsh" "zshenv" "zshrc" )
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
