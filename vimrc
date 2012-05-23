@@ -1,6 +1,5 @@
 " Pathogen
 call pathogen#infect()
-call pathogen#helptags()
 "
 " No VI
 set nocompatible
@@ -8,12 +7,7 @@ filetype off
 
 let g:syntastic_disabled_filestypes = ['html']
 
-" 256 colors
-set t_Co=256
-
-
 " Enable filetype plugins
-filetype on
 filetype plugin on
 filetype indent on
 
@@ -33,18 +27,21 @@ set enc=utf-8
 " Syntastic
 let g:syntastic_auto_loc_list=1
 
+" Because Syntax highlighting is slow on REALLY long lines, like thoose in
+" some of our projects. Disable it after 200 chars.
+set synmaxcol=200 
+
 " Search
 set incsearch
 set hlsearch
 set ignorecase
 
 " History Swap and backup
-set history=100
-set backup
-set backupdir=$HOME/.vim/backup
-set directory=$HOME/.vim/temp
+set history=50
+set nobackup
+set noswapfile
 set undofile
-set undodir=$HOME/.vim/temp
+set undodir=/tmp/vim-undofile
 
 " Commandline
 set cmdheight=2
@@ -68,7 +65,6 @@ set number
 set ruler
 set nowrap
 set nofoldenable
-set colorcolumn=130
 set lazyredraw
 set noshowmatch
 
