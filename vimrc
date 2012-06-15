@@ -13,6 +13,7 @@ filetype indent on
 
 syntax on
 colorscheme Tomorrow-Night
+colorscheme badwolf
 
 " Change the leader from \ to ,
 let mapleader = ","

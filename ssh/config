@@ -2,13 +2,17 @@ ForwardAgent yes
 ControlMaster auto
 #ControlPath /tmp/ssh_mux_%h_%p_%r
 
+Host symfony-aws
+    User ubuntu
+    HostName symfony.aws.peytz.dk
+
+Host piglet
+    User hb
+    HostName piglet.bjrnskov.dk
+
 Host laffe
     User hb
     HostName laffe.bjrnskov.dk
-
-Host oso
-    User hb
-    HostName oso.bjrnskov.dk
 
 Host dev
     User hb
@@ -19,6 +23,3 @@ Host superfos
 
 Host fbi
     HostName fbi.aws.peytz.dk
-
-Host git01.phpfog.com
-    IdentityFile ~/.ssh/phpfog

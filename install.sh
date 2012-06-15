@@ -2,7 +2,7 @@
 
 set -e
 
-dotfiles=( "vim" "vimrc" "gvimrc" "inputrc" "zsh" "zshenv" "zshrc" )
+dotfiles=( "vim" "vimrc" "gvimrc" "inputrc" "zsh" "zshenv" "zshrc" "editorconfig" )
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 

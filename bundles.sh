@@ -2,8 +2,8 @@
 
 set -e
 
+BUNDLES[0]="git://github.com/editorconfig/editorconfig-vim.git"
 BUNDLES[1]="git://github.com/godlygeek/tabular.git"
-BUNDLES[2]="git://github.com/tpope/vim-markdown.git"
 BUNDLES[3]="git://github.com/scrooloose/syntastic.git"
 BUNDLES[4]="git://github.com/othree/html5.vim.git"
 BUNDLES[5]="git://github.com/2072/PHP-Indenting-for-VIm.git"
@@ -13,7 +13,7 @@ BUNDLES[8]="https://github.com/ervandew/supertab.git"
 BUNDLES[9]="https://github.com/veloce/vim-aldmeris.git"
 BUNDLES[10]="https://github.com/Lokaltog/vim-powerline.git"
 BUNDLES[11]="https://github.com/kana/vim-smartinput.git"
-BUNDLES[12]="https://github.com/sjl/vitality.vim.git"
+BUNDLES[12]="https://github.com/sjl/badwolf.git"
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUNDLES_DIR="$DIR/vim/bundle"
