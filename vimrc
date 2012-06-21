@@ -11,9 +11,14 @@ let g:syntastic_disabled_filestypes = ['html']
 filetype plugin on
 filetype indent on
 
+" Solarized
+let g:solarized_visibility="high"
+let g:solarized_contrast="high"
+
 syntax on
-colorscheme Tomorrow-Night
-colorscheme badwolf
+set background=light
+colorscheme solarized
+
 
 " Change the leader from \ to ,
 let mapleader = ","
