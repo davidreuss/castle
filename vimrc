@@ -16,8 +16,8 @@ let g:solarized_visibility="high"
 let g:solarized_contrast="high"
 
 syntax on
-set background=light
-colorscheme solarized
+" set background=light
+colorscheme eddie
 
 
 " Change the leader from \ to ,
