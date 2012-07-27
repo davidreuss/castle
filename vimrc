@@ -19,7 +19,6 @@ syntax on
 " set background=light
 colorscheme eddie
 
-
 " Change the leader from \ to ,
 let mapleader = ","
 let g:mapleader = ","

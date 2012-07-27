@@ -4,6 +4,7 @@ set -e
 
 BUNDLES[0]="https://github.com/editorconfig/editorconfig-vim.git"
 BUNDLES[1]="https://github.com/godlygeek/tabular.git"
+BUNDLES[2]="https://github.com/avakhov/vim-yaml.git"
 BUNDLES[3]="https://github.com/scrooloose/syntastic.git"
 BUNDLES[5]="https://github.com/2072/PHP-Indenting-for-VIm.git"
 BUNDLES[6]="https://github.com/msanders/snipmate.vim.git"
