@@ -17,20 +17,20 @@ BUNDLES[13]="https://github.com/motemen/git-vim.git"
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUNDLES_DIR="$DIR/vim/bundle"
 
-echo "> Trashing everything"
+echo "Trashing everything!"
 
-echo ">> Remove $BUNDLES_DIR"
+echo " - Removed $BUNDLES_DIR"
 rm -Rf $BUNDLES_DIR
 
-echo ">> Recreate $BUNDLES_DIR"
+echo " - Created $BUNDLES_DIR"
 mkdir $BUNDLES_DIR
 
 echo ""
 
-echo "> Installing bundles"
+echo "Installing bundles"
 cd $BUNDLES_DIR
 for bundle in ${BUNDLES[@]}; do
-    echo ">> installing $bundle"
+    echo " - Installing $bundle"
     git clone $bundle &>/dev/null
 done;
 
