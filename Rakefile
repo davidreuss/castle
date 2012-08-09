@@ -1,3 +1,4 @@
+require "fileutils"
 
 home_dir = Dir.home
 current_dir = Dir.getwd
@@ -11,7 +12,6 @@ task :symlinks do
   for dotfile in dotfiles do
     path = "#{home_dir}/.#{dotfile}"
     real = "#{current_dir}/#{dotfile}"
-
 
     puts "    Creating symlink for #{real} at #{path}"
     File.symlink(real, path) unless File.exists?(path)
@@ -31,12 +31,15 @@ task :bundles do
   puts "Installing vim bundles"
 
   bundle_dir = "#{current_dir}/vim/bundle"
+  installed  = Array.new
 
   Dir.mkdir(bundle_dir) unless Dir.exists?(bundle_dir)
 
   File.open("#{current_dir}/Bundlefile").each do |line|
     parts = line.split( )
     path = "#{bundle_dir}/#{parts[0]}"
+    
+    installed.push(parts[0])
 
     if Dir.exists?(path)
       puts "    Updating #{parts[0]}"
@@ -45,7 +48,13 @@ task :bundles do
       puts "    Installing #{parts[0]}"
       system "git clone -q #{parts[1]} #{path}"
     end
+  end
 
+  (Dir.entries(bundle_dir) - ['.', '..']).each do |directory|
+    unless installed.include?(directory)
+      puts "    Removing #{directory}"
+      FileUtils.rm_rf("#{bundle_dir}/#{directory}")
+    end
   end
 end
 
