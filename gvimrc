@@ -6,7 +6,7 @@
 " set gfn=Droid\ Sans\ Mono:h14
 
 set guioptions-=T
-set guifont=Menlo:h14
+set guifont=Menlo:h15
 
 set listchars=tab:▸\ ,eol:¬
 
