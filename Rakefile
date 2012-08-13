@@ -1,4 +1,5 @@
 require "fileutils"
+require_relative "string"
 
 home_dir = Dir.home
 current_dir = Dir.getwd
@@ -13,7 +14,7 @@ task :symlinks do
     path = "#{home_dir}/.#{dotfile}"
     real = "#{current_dir}/#{dotfile}"
 
-    puts "    Creating symlink for #{real} at #{path}"
+    puts "Creating symlink for #{real} at #{path}".indent(4)
     File.symlink(real, path) unless File.exists?(path)
   end
 end
@@ -42,17 +43,17 @@ task :bundles do
     installed.push(parts[0])
 
     if Dir.exists?(path)
-      puts "    Updating #{parts[0]}"
+      puts "Updating #{parts[0]}".indent(4)
       system "cd #{path};git fetch -q origin; git reset -q --hard"
     else
-      puts "    Installing #{parts[0]}"
+      puts "Installing #{parts[0]}".indent(4)
       system "git clone -q #{parts[1]} #{path}"
     end
   end
 
   (Dir.entries(bundle_dir) - ['.', '..']).each do |directory|
     unless installed.include?(directory)
-      puts "    Removing #{directory}"
+      puts "Removing #{directory}".indent(4)
       FileUtils.rm_rf("#{bundle_dir}/#{directory}")
     end
   end
