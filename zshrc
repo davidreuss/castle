@@ -8,11 +8,11 @@ autoload -U vcs_info
 autoload -U zmv
 
 # VCS
-zstyle ':vcs_info:*' enable hg git svn cvs
+zstyle ':vcs_info:*' enable git cvs
 zstyle ':vcs_info:*' use-simple true
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr "+" # uncommitted changes
-zstyle ':vcs_info:*' formats "[%{$fg_bold[green]%}%b%{$reset_color%}%{$fg_bold[red]%}%u%{$reset_color%}]"
+zstyle ':vcs_info:*' formats " (%{$fg_bold[green]%}%b%{$reset_color%}%{$fg_bold[red]%}%u%{$reset_color%})"
 
 # Make autocompletion be case insensitive
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
@@ -30,17 +30,11 @@ HISTSIZE=100
 SAVEHIST=100
 REPORTTIME=10
 
-PROMPT='${vcs_info_msg_0_}[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
-
-# Export options.
-export CLICOLOR=xterm-256
+PROMPT='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}${vcs_info_msg_0_} '
 
 # We like vim
 export EDITOR="vim"
 bindkey -v
-
-# Aliases
-alias slashdot='find . -name "*.DS_Store" -type f -delete && find . -name "._*" -type f -delete'
 
 # Import syntax highlighting if exists
 [[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
