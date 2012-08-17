@@ -1,5 +1,9 @@
-# /usr/local/bin for Homebrew stuff
-export PATH=$HOME/bin:$HOME/bin/vendor/bin:/usr/local/sbin:/usr/local/bin:$PATH
+# zsh options
+setopt noglobalrcs
+setopt complete_in_word prompt_subst always_to_end correct_all
+setopt appendhistory hist_ignore_all_dups hist_ignore_space
+setopt ignore_eof local_options local_traps
+setopt auto_pushd pushd_ignore_dups pushdminus
 
-# Useful aliases
-alias json-decode="php -r 'print_r(json_decode(file_get_contents(\"php://stdin\")));'"
+# zsh unset
+unsetopt menu_complete 
