@@ -36,8 +36,11 @@ PROMPT='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$rese
 export EDITOR="vim"
 bindkey -v
 
+# Colors dude, they are awesome!
+export CLICOLOR=xterm-256color
+
 # Import syntax highlighting if exists
-[[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Last but not least load a .zshlocal if exists for local overrides
-[[ -f ~/.zshlocal ]] && .  ~/.zshlocal
+[[ -f ~/.zshlocal ]] && source  ~/.zshlocal
