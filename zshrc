@@ -39,14 +39,5 @@ bindkey -v
 # Colors dude, they are awesome!
 export CLICOLOR=xterm-256color
 
-# Import syntax highlighting if exists
-[[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-[[ -f $HOME/.zsh/antigen.zsh ]] && source $HOME/.zsh/antigen.zsh
-
 # Last but not least load a .zshlocal if exists for local overrides
 [[ -f ~/.zshlocal ]] && source  ~/.zshlocal
-
-# Antigen bundles
-antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-apply
