@@ -1,18 +1,17 @@
 # Add ~/.zsh/functions to $fpath 
-fpath=($fpath $HOME/.zsh/completions $HOME/.zsh/functions)
+fpath=($fpath $HOME/.zsh/completions)
 
 # Load modules
 autoload -U colors && colors
 autoload -U zmv
 
-source zsh/vcs.zsh
-source zsh/completion.zsh
-source zsh/terminal.zsh
-source zsh/prompt.zsh
-source zsh/terminal.zsh
+source $HOME/.zsh/vcs.zsh
+source $HOME/.zsh/completion.zsh
+source $HOME/.zsh/terminal.zsh
+source $HOME/.zsh/prompt.zsh
 
 # We like vim
 export EDITOR="vim"
 
 # Last but not least load a .zshlocal if exists for local overrides
-[[ -f ~/.zshlocal ]] && source  ~/.zshlocal
+[[ -f $HOME/.zshlocal ]] && source $HOME/.zshlocal
