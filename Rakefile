@@ -1,5 +1,4 @@
 require "fileutils"
-require_relative "string"
 
 home_dir = Dir.home
 current_dir = Dir.getwd
@@ -17,14 +16,6 @@ task :symlinks do
     puts "Creating symlink for #{real} at #{path}".indent(4)
     File.symlink(real, path) unless File.exists?(path)
   end
-end
-
-desc "Update submodules"
-task :submodules do
-  puts  "Updating submodules"
-
-  system "git submodule -q sync"
-  system "git submodule -q update --init"
 end
 
 desc "Install/Update Vim Bundles"
@@ -64,5 +55,11 @@ task :install do
   %w(symlinks submodules bundles).each do |name|
     Rake::Task[name].invoke
     puts ""
+  end
+end
+
+class String
+  def indent count
+    " " * 4 + self
   end
 end
