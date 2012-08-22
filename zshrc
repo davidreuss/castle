@@ -9,6 +9,7 @@ source $HOME/.zsh/vcs.zsh
 source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/terminal.zsh
 source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/history.zsh
 
 # We like vim
 export EDITOR="vim"
