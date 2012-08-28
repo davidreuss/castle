@@ -7,7 +7,7 @@ desc "Create symlinks"
 task :symlinks do
   puts "Installing dotfiles"
 
-  dotfiles = %w(vim vimrc gvimrc inputrc zsh zshenv zshrc editorconfig)
+  dotfiles = %w(vim vimrc gvimrc zsh zshenv zshrc editorconfig)
 
   for dotfile in dotfiles do
     path = "#{home_dir}/.#{dotfile}"
