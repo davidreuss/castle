@@ -29,6 +29,9 @@ set backspace=indent,eol,start
 " Default charset for buffers are UTF-8
 set enc=utf-8
 
+" We like zsh
+set shell=zsh
+
 " Syntastic
 let g:syntastic_auto_loc_list=1
 
