@@ -55,7 +55,7 @@ class GitInstaller
       system "cd #{full_path} && git fetch -q origin; git reset -q --hard"
     else
       puts "- Installing #{name}"
-      system "git clone -q #{repository} #{path}"
+      system "git clone -q #{repository} #{full_path}"
     end
   end
 
