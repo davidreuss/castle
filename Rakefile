@@ -1,4 +1,5 @@
 require "fileutils"
+require "./lib/git_installer.rb"
 
 home_dir = Dir.home
 current_dir = Dir.getwd
@@ -23,7 +24,6 @@ task :bundles do
   puts "Installing vim bundles"
 
   bundle_dir = "#{current_dir}/vim/bundle"
-  installed  = Array.new
   installer  = GitInstaller.new bundle_dir
 
   Dir.mkdir(bundle_dir) unless Dir.exists?(bundle_dir)
@@ -31,12 +31,10 @@ task :bundles do
   File.open("#{current_dir}/Bundlefile").each do |line|
     parts = line.split( )
 
-    installed.push parts[0]
-
     installer.install_or_update parts[0], parts[1]
   end
 
-  installer.cleanup_installed installed
+  installer.cleanup_installed
 end
 
 desc "Install"
@@ -48,13 +46,16 @@ task :install do
 end
 
 class GitInstaller
-  attr_reader :path
+  attr_reader :path, :installed
 
   def initialize path
     @path = path
+    @installed = []
   end
 
   def install_or_update name, repository
+    @installed << name
+
     full_path = "#{@path}/#{name}"
 
     if Dir.exists?(full_path)
@@ -66,7 +67,7 @@ class GitInstaller
     end
   end
 
-  def cleanup_installed installed
+  def cleanup_installed
     directories = Dir.entries(path) - ['.', '..']
 
     directories.each do |directory|
