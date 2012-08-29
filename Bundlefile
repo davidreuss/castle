@@ -5,7 +5,7 @@ syntastic       https://github.com/scrooloose/syntastic.git
 php-indenting   https://github.com/2072/PHP-Indenting-for-VIm.git
 snipmate        https://github.com/msanders/snipmate.vim.git
 css-color       https://github.com/ap/vim-css-color.git
-supertav        https://github.com/ervandew/supertab.git
+supertab        https://github.com/ervandew/supertab.git
 powerline       https://github.com/Lokaltog/vim-powerline.git
 solarized       https://github.com/altercation/vim-colors-solarized.git
 git             https://github.com/motemen/git-vim.git

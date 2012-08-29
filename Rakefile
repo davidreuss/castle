@@ -24,6 +24,7 @@ task :bundles do
 
   bundle_dir = "#{current_dir}/vim/bundle"
   installed  = Array.new
+  installer  = GitInstaller.new bundle_dir
 
   Dir.mkdir(bundle_dir) unless Dir.exists?(bundle_dir)
 
@@ -32,10 +33,10 @@ task :bundles do
 
     installed.push parts[0]
 
-    GitInstaller.install_or_update bundle_dir, parts[0], parts[1]
+    installer.install_or_update parts[0], parts[1]
   end
 
-  GitInstaller.cleanup_installed bundle_dir installed
+  installer.cleanup_installed installed
 end
 
 desc "Install"
@@ -47,8 +48,14 @@ task :install do
 end
 
 class GitInstaller
-  def self.install_or_update path, name, repository
-    full_path = "#{path}/#{name}"
+  attr_reader :path
+
+  def initialize path
+    @path = path
+  end
+
+  def install_or_update name, repository
+    full_path = "#{@path}/#{name}"
 
     if Dir.exists?(full_path)
       puts "- Updating #{name}"
@@ -59,7 +66,7 @@ class GitInstaller
     end
   end
 
-  def cleanup_installed path, installed
+  def cleanup_installed installed
     directories = Dir.entries(path) - ['.', '..']
 
     directories.each do |directory|
