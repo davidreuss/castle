@@ -9,3 +9,4 @@ supertav        https://github.com/ervandew/supertab.git
 powerline       https://github.com/Lokaltog/vim-powerline.git
 solarized       https://github.com/altercation/vim-colors-solarized.git
 git             https://github.com/motemen/git-vim.git
+ctrlp           https://github.com/kien/ctrlp.vim.git
