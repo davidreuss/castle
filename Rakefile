@@ -13,7 +13,7 @@ task :symlinks do
     path = "#{home_dir}/.#{dotfile}"
     real = "#{current_dir}/#{dotfile}"
 
-    puts "Creating symlink for #{real} at #{path}".indent(4)
+    puts "- Creating symlink for #{real} at #{path}"
     File.symlink(real, path) unless File.exists?(path)
   end
 end
@@ -29,25 +29,13 @@ task :bundles do
 
   File.open("#{current_dir}/Bundlefile").each do |line|
     parts = line.split( )
-    path = "#{bundle_dir}/#{parts[0]}"
-    
-    installed.push(parts[0])
 
-    if Dir.exists?(path)
-      puts "Updating #{parts[0]}".indent(4)
-      system "cd #{path};git fetch -q origin; git reset -q --hard"
-    else
-      puts "Installing #{parts[0]}".indent(4)
-      system "git clone -q #{parts[1]} #{path}"
-    end
+    installed.push parts[0]
+
+    GitInstaller.install_or_update bundle_dir, parts[0], parts[1]
   end
 
-  (Dir.entries(bundle_dir) - ['.', '..']).each do |directory|
-    unless installed.include?(directory)
-      puts "Removing #{directory}".indent(4)
-      FileUtils.rm_rf("#{bundle_dir}/#{directory}")
-    end
-  end
+  GitInstaller.cleanup_installed bundle_dir installed
 end
 
 desc "Install"
@@ -58,8 +46,27 @@ task :install do
   end
 end
 
-class String
-  def indent count
-    " " * 4 + self
+class GitInstaller
+  def self.install_or_update path, name, repository
+    full_path = "#{path}/#{name}"
+
+    if Dir.exists?(full_path)
+      puts "- Updating #{name}"
+      system "cd #{full_path} && git fetch -q origin; git reset -q --hard"
+    else
+      puts "- Installing #{name}"
+      system "git clone -q #{repository} #{path}"
+    end
+  end
+
+  def cleanup_installed path, installed
+    directories = Dir.entries(path) - ['.', '..']
+
+    directories.each do |directory|
+      unless installed.include?(directory)
+        puts "- Removing #{directory}"
+        FileUtils.rm_rf("#{path}/#{directory}")
+      end
+    end
   end
 end
