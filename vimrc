@@ -16,6 +16,7 @@ let g:solarized_visibility="high"
 let g:solarized_contrast="high"
 
 syntax on
+
 " set background=light
 colorscheme eddie
 
@@ -36,7 +37,7 @@ set shell=zsh
 let g:syntastic_auto_loc_list=1
 
 " CtrlP
-nnoremap <silent> <Leader>t :CtrlP<cr>
+map <leader>t :CtrlP<CR>
 
 " Because Syntax highlighting is slow on REALLY long lines, like thoose in
 " some of our projects. Disable it after 200 chars.
