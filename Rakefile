@@ -1,5 +1,4 @@
 require "fileutils"
-require "./lib/git_installer.rb"
 
 home_dir = Dir.home
 current_dir = Dir.getwd
