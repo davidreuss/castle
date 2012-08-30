@@ -38,6 +38,14 @@ let g:syntastic_auto_loc_list=1
 
 " CtrlP
 map <leader>t :CtrlP<CR>
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files'],
+    \ },
+    \ 'fallback': 'find %s -type f'
+\ }
 
 " Because Syntax highlighting is slow on REALLY long lines, like thoose in
 " some of our projects. Disable it after 200 chars.
