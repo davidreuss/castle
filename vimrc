@@ -18,7 +18,8 @@ let g:solarized_contrast="high"
 syntax on
 
 " set background=light
-colorscheme eddie
+" colorscheme eddie
+colorscheme molokai
 
 " Change the leader from \ to ,
 let mapleader = ","
@@ -39,7 +40,7 @@ let g:syntastic_auto_loc_list=1
 " CtrlP
 map <leader>t :CtrlP<CR>
 let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
 let g:ctrlp_user_command = {
     \ 'types': {
         \ 1: ['.git', 'cd %s && git ls-files'],
