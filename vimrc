@@ -7,19 +7,16 @@ filetype off
 
 let g:syntastic_disabled_filestypes = ['html']
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-" Solarized
-let g:solarized_visibility="high"
-let g:solarized_contrast="high"
-
 syntax on
+
+" Enable filetype plugins
+filetype plugin indent on
 
 " set background=light
 " colorscheme eddie
 colorscheme molokai
+set t_Co=256
+set background=dark
 
 " Change the leader from \ to ,
 let mapleader = ","
@@ -35,7 +32,11 @@ set enc=utf-8
 set shell=zsh
 
 " Syntastic
+let g:syntastic_quiet_warnings=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['html'] }
 
 " CtrlP
 map <leader>t :CtrlP<CR>
@@ -48,17 +49,13 @@ let g:ctrlp_user_command = {
     \ 'fallback': 'find %s -type f'
 \ }
 
-" Because Syntax highlighting is slow on REALLY long lines, like thoose in
-" some of our projects. Disable it after 200 chars.
-set synmaxcol=200 
-
 " Search
 set incsearch
 set hlsearch
-set ignorecase
+set ignorecase smartcase
 
 " History Swap and backup
-set history=50
+set history=10000
 set nobackup
 set noswapfile
 set undofile
@@ -72,7 +69,7 @@ set laststatus=2
 
 " Commands autocomplete
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=longest,list
 
 " Statusline with fugitive and encoding
 set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
