@@ -94,7 +94,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['html'] }
 
 " CtrlP
-map <leader>t :CtrlP<CR>
+let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
 let g:ctrlp_user_command = {
