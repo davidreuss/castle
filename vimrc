@@ -25,10 +25,6 @@ set backspace=indent,eol,start
 " Default charset for buffers are UTF-8
 set enc=utf-8
 
-" We like zsh but this makes phpenv work and sets up a lot of the nice
-" PATH stuff. Dont know why (Stolen from Gary Bernhardt)
-set shell=bash
-
 " Search
 set hlsearch
 set ignorecase smartcase
@@ -52,7 +48,6 @@ set wildmode=longest,list
 
 " Error bells
 set noerrorbells
-set visualbell
 
 " Basic editing
 set number

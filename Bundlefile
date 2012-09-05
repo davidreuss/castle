@@ -3,6 +3,5 @@ tabular         https://github.com/godlygeek/tabular.git
 powerline       https://github.com/Lokaltog/vim-powerline.git
 syntastic       https://github.com/scrooloose/syntastic.git
 php-indenting   https://github.com/2072/PHP-Indenting-for-VIm.git
-css-color       https://github.com/ap/vim-css-color.git
 ctrlp           https://github.com/kien/ctrlp.vim.git
 molokai         https://github.com/tomasr/molokai.git
