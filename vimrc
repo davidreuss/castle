@@ -1,6 +1,6 @@
 " Pathogen
 call pathogen#infect()
-"
+
 " No VI
 set nocompatible
 filetype off
@@ -16,7 +16,6 @@ filetype plugin indent on
 " colorscheme eddie
 colorscheme molokai
 set t_Co=256
-set background=dark
 
 " Change the leader from \ to ,
 let mapleader = ","
@@ -50,7 +49,6 @@ let g:ctrlp_user_command = {
 \ }
 
 " Search
-set incsearch
 set hlsearch
 set ignorecase smartcase
 
