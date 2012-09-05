@@ -5,8 +5,6 @@ call pathogen#infect()
 set nocompatible
 filetype off
 
-let g:syntastic_disabled_filestypes = ['html']
-
 syntax on
 
 " Enable filetype plugins
@@ -31,24 +29,6 @@ set enc=utf-8
 " PATH stuff. Dont know why (Stolen from Gary Bernhardt)
 set shell=bash
 
-" Syntastic
-let g:syntastic_quiet_warnings=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['html'] }
-
-" CtrlP
-map <leader>t :CtrlP<CR>
-let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files'],
-    \ },
-    \ 'fallback': 'find %s -type f'
-\ }
-
 " Search
 set hlsearch
 set ignorecase smartcase
@@ -69,9 +49,6 @@ set laststatus=2
 " Commands autocomplete
 set wildmenu
 set wildmode=longest,list
-
-" Statusline with fugitive and encoding
-set statusline=%-(%F%m%r%h%w%)\ %{&ff}/%Y/%{&encoding}\ %=%(@\%03.3b\ %Ll\ %l,%v\ (%p%%)%)
 
 " Error bells
 set noerrorbells
@@ -107,3 +84,27 @@ set smarttab
 set scrolloff=5
 set textwidth=0
 set nomodeline
+
+" Jump to last edited line if valid
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+
+" Powerline
+let g:Powerline_colorscheme="skwp"
+
+" Syntastic
+let g:syntastic_quiet_warnings=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': ['html'] }
+
+" CtrlP
+map <leader>t :CtrlP<CR>
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files'],
+    \ },
+    \ 'fallback': 'find %s -type f'
+\ }
