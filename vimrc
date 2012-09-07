@@ -80,6 +80,9 @@ set scrolloff=5
 set textwidth=0
 set nomodeline
 
+" Json highlight
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
