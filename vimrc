@@ -92,9 +92,6 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
-" Powerline
-let g:Powerline_colorscheme="skwp"
-
 " Syntastic
 let g:syntastic_quiet_warnings=1
 let g:syntastic_auto_loc_list=1
