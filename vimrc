@@ -80,6 +80,12 @@ set scrolloff=5
 set textwidth=0
 set nomodeline
 
+" Smart tabbing
+inoremap <tab> <c-r>=Smart_TabComplete()<CR>
+
+" Easier renaming of files
+map <leader>n :call RenameFile()<cr>
+
 " Json highlight
 autocmd BufNewFile,BufRead *.json set ft=javascript
 

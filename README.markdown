@@ -1,5 +1,5 @@
-/Users/Henrik
-=============
+~/.HenrikBjornskov
+==================
 
 This is my collection of dotfiles which I use to make my everyday life easier.
 
