@@ -93,7 +93,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
 " Syntastic
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_warnings=0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
