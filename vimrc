@@ -1,9 +1,9 @@
-" Pathogen
-call pathogen#infect()
-
 " No VI
 set nocompatible
 filetype off
+
+" Pathogen
+call pathogen#infect()
 
 syntax on
 
