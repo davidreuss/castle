@@ -10,9 +10,7 @@ syntax on
 " Enable filetype plugins
 filetype plugin indent on
 
-" set background=light
-" colorscheme eddie
-colorscheme molokai
+colorscheme Tomorrow-Night
 set t_Co=256
 
 " Change the leader from \ to ,
@@ -44,7 +42,7 @@ set laststatus=2
 
 " Commands autocomplete
 set wildmenu
-set wildmode=longest,list
+set wildmode=list:longest,full
 
 " Error bells
 set noerrorbells
@@ -80,14 +78,26 @@ set scrolloff=5
 set textwidth=0
 set nomodeline
 
-" Smart tabbing
-inoremap <tab> <c-r>=Smart_TabComplete()<CR>
-
 " Easier renaming of files
 map <leader>n :call RenameFile()<cr>
 
 " Json highlight
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" Completion
+let g:omni_syntax_group_include_php = 'phpFunctions,phpMethods'
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_disable_auto_complete = 1
+let g:neocomplcache_enable_auto_select = 1
+
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
+
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+function! s:check_back_space()"{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}
 
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
@@ -103,9 +113,3 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files'],
-    \ },
-    \ 'fallback': 'find %s -type f'
-\ }
