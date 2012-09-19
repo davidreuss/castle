@@ -38,7 +38,7 @@ end
 
 desc "Install"
 task :install do
-  %w(symlinks submodules bundles).each do |name|
+  %w(symlinks bundles).each do |name|
     Rake::Task[name].invoke
     puts ""
   end
