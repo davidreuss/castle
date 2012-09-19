@@ -84,20 +84,9 @@ map <leader>n :call RenameFile()<cr>
 " Json highlight
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
-" Completion
-let g:omni_syntax_group_include_php = 'phpFunctions,phpMethods'
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_disable_auto_complete = 1
-let g:neocomplcache_enable_auto_select = 1
-
-set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
-function! s:check_back_space()"{{{
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1] =~ '\s'
-endfunction"}}
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
