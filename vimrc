@@ -83,6 +83,7 @@ map <leader>n :call RenameFile()<cr>
 
 " Json highlight
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead Boxfile set ft=yaml
 
 set completeopt=longest,menuone
 
