@@ -78,14 +78,15 @@ set scrolloff=5
 set textwidth=0
 set nomodeline
 
+" Statusline
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
 " Easier renaming of files
 map <leader>n :call RenameFile()<cr>
 
 " Json highlight
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead Boxfile set ft=yaml
-
-set completeopt=longest,menuone
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
