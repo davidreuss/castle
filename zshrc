@@ -5,6 +5,8 @@ fpath=($fpath $HOME/.zsh/completions)
 autoload -U colors && colors
 autoload -U zmv
 
+source $HOME/.zsh/antigen.zsh
+source $HOME/.zsh/bundles.zsh
 source $HOME/.zsh/vcs.zsh
 source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/terminal.zsh
