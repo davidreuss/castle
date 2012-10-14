@@ -10,7 +10,6 @@ syntax on
 " Enable filetype plugins
 filetype plugin indent on
 
-colorscheme Tomorrow-Night
 set t_Co=256
 
 " Change the leader from \ to ,
