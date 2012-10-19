@@ -1,6 +1,6 @@
 require "fileutils"
 
-home_dir = Dir.home
+home_dir = File.expand_path '~'
 current_dir = Dir.getwd
 
 desc "Create symlinks"
@@ -25,7 +25,7 @@ task :bundles do
   bundle_dir = "#{current_dir}/vim/bundle"
   installer  = GitInstaller.new bundle_dir
 
-  Dir.mkdir(bundle_dir) unless Dir.exists?(bundle_dir)
+  Dir.mkdir(bundle_dir) unless File.exists?(bundle_dir)
 
   File.open("#{current_dir}/Bundlefile").each do |line|
     parts = line.split( )
@@ -57,7 +57,7 @@ class GitInstaller
 
     full_path = "#{@path}/#{name}"
 
-    if Dir.exists?(full_path)
+    if File.exists?(full_path)
       puts "- Updating #{name}"
       system "cd #{full_path} && git fetch -q origin; git reset -q --hard"
     else
