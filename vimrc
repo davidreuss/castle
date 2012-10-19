@@ -78,6 +78,8 @@ set scrolloff=5
 set textwidth=0
 set nomodeline
 
+set shell=bash
+
 " Statusline
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
@@ -92,6 +94,9 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+
+" Run file
+map <leader>m :!php %<CR>
 
 " Syntastic
 let g:syntastic_quiet_warnings=0
