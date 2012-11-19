@@ -109,3 +109,13 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
+
+" Disable Arrow Keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>@
