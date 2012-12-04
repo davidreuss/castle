@@ -2,8 +2,8 @@ vim/backup/*
 vim/temp/*
 vim/.VimballRecord
 vim/.netrwhist
-vim/bundle/*
+vim/flavors
 .DS_Store
+VimFlavor.lock
 
 !.gitkeep
-!vim/bundle/vundle

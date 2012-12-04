@@ -3,8 +3,8 @@ require "fileutils"
 home_dir = File.expand_path '~'
 current_dir = Dir.getwd
 
-desc "Create symlinks"
-task :symlinks do
+desc "Install symlinks"
+task :install do
   puts "Installing dotfiles"
 
   dotfiles = %w(vim vimrc gvimrc zsh zshenv zshrc editorconfig)
@@ -15,65 +15,5 @@ task :symlinks do
 
     puts "- Creating symlink for #{real} at #{path}"
     File.symlink(real, path) unless File.exists?(path)
-  end
-end
-
-desc "Install/Update Vim Bundles"
-task :bundles do
-  puts "Installing vim bundles"
-
-  bundle_dir = "#{current_dir}/vim/bundle"
-  installer  = GitInstaller.new bundle_dir
-
-  Dir.mkdir(bundle_dir) unless File.exists?(bundle_dir)
-
-  File.open("#{current_dir}/Bundlefile").each do |line|
-    parts = line.split( )
-
-    installer.install_or_update parts[0], parts[1]
-  end
-
-  installer.cleanup_installed
-end
-
-desc "Install"
-task :install do
-  %w(symlinks bundles).each do |name|
-    Rake::Task[name].invoke
-    puts ""
-  end
-end
-
-class GitInstaller
-  attr_reader :path, :installed
-
-  def initialize path
-    @path = path
-    @installed = []
-  end
-
-  def install_or_update name, repository
-    @installed << name
-
-    full_path = "#{@path}/#{name}"
-
-    if File.exists?(full_path)
-      puts "- Updating #{name}"
-      system "cd #{full_path} && git fetch -q origin; git reset -q --hard"
-    else
-      puts "- Installing #{name}"
-      system "git clone -q #{repository} #{full_path}"
-    end
-  end
-
-  def cleanup_installed
-    directories = Dir.entries(path) - ['.', '..']
-
-    directories.each do |directory|
-      unless installed.include?(directory)
-        puts "- Removing #{directory}"
-        FileUtils.rm_rf("#{path}/#{directory}")
-      end
-    end
   end
 end
