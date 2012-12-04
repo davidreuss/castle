@@ -2,10 +2,8 @@
 set nocompatible
 filetype off
 
+" vim-flavor
 runtime flavors/bootstrap.vim
-
-" Pathogen
-" call pathogen#infect()
 
 syntax on
 
