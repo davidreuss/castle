@@ -5,6 +5,10 @@ filetype off
 " vim-flavor
 runtime flavors/bootstrap.vim
 
+" modelines
+set modeline
+set modelines=5
+
 syntax on
 
 " Enable filetype plugins
