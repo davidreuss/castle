@@ -7,13 +7,16 @@ Installing
 ----------
 
 ``` bash
-$ gem install vim-flavor
-$ cd $SETUP_DIR
-$ vim-flavor install
 $ rake install
 ```
 
 Will create symlinks in the current users `$HOME` directory to all zsh and vim files.
+
+To install the plugins and bundles that is used open Vim and run the following commands.
+
+``` bash
+:BundleInstall
+```
 
 Extra for zshell users
 ----------------------

@@ -24,15 +24,3 @@ task :symlinks do
     File.symlink(real, path) unless File.exists?(path)
   end
 end
-
-desc "Install vim-flavor if unavailable"
-task :gem do
-  begin
-    Gem::Specification.find_by_name('vim-flavor')
-
-    puts "- vim-flavor is already installed"
-  rescue Gem::LoadError
-    system 'gem install vim-flavor'
-    system 'vim-flavor install'
-  end
-end

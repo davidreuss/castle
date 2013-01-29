@@ -2,8 +2,16 @@
 set nocompatible
 filetype off
 
-" vim-flavor
-runtime flavors/bootstrap.vim
+" Vundle
+set rtp+=$HOME/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/syntastic'
+Bundle '2072/PHP-Indenting-for-VIm'
+Bundle 'kien/ctrlp.vim'
 
 " modelines
 set modeline

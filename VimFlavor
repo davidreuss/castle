@@ -1,7 +1,0 @@
-# vim: set filetype=ruby:
-
-flavor 'editorconfig/editorconfig-vim', '~> 1.0'
-flavor 'godlygeek/tabular', '~> 0.0'
-flavor 'scrooloose/syntastic', '~> 2.0'
-flavor '2072/PHP-Indenting-for-VIm', '~> 1.0'
-flavor 'kien/ctrlp.vim', '~> 1.0'
