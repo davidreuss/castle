@@ -99,6 +99,9 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
+" When editing use %% to expand to current directory
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
 " Run file
 map <leader>m :!php %<CR>
 
