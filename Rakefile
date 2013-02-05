@@ -5,9 +5,7 @@ current_dir = Dir.getwd
 
 desc "Install symlinks and gem and bundles"
 task :install do
-  ["symlinks", "gem"].each do |task_name|
-    Rake::Task[task_name].invoke
-  end
+  Rake::Task['symlinks'].invoke
 end
 
 desc "Install symlinks"
