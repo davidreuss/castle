@@ -12,6 +12,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'scrooloose/syntastic'
 Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'kien/ctrlp.vim'
+Bundle 'rodjek/vim-puppet'
 
 " modelines
 set modeline
@@ -23,7 +24,8 @@ syntax on
 filetype plugin indent on
 
 set t_Co=256
-colorscheme smyck
+colorscheme flatland
+" color github256
 
 " Change the leader from \ to ,
 let mapleader = ","
@@ -66,6 +68,7 @@ set nowrap
 set nofoldenable
 set lazyredraw
 set noshowmatch
+set colorcolumn=120
 
 " Preserve cursor position when moving up/down if posible
 set nostartofline
@@ -124,6 +127,12 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
+
+" PHPSpec2
+let g:phpspec_executable = 'phpspec'
+
+" MatchIt
+runtime macros/matchit.vim
 
 " Disable Arrow Keys
 map <up> <nop>
