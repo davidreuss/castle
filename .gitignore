@@ -5,7 +5,7 @@ vim/temp/*
 vim/bundle/*
 
 vim/.VimballRecord
-vim/.netrwhist
+.netrwhist
 
 !.gitkeep
 !vim/bundle/vundle
