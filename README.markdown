@@ -1,16 +1,15 @@
 Setup
 =====
 
-This is my collection of dotfiles which I use to make my everyday life easier.
+This is my dotfiles which is symlinked using homesick.
 
 Installing
 ----------
 
 ``` bash
-$ rake install
+$ homesick clone henrikbjorn/setup
+$ homesick symlink setup
 ```
-
-Will create symlinks in the current users `$HOME` directory to all zsh and vim files.
 
 To install the plugins and bundles that is used open Vim and run the following commands.
 
