@@ -7,8 +7,8 @@ Installing
 ----------
 
 ``` bash
-$ homesick clone henrikbjorn/setup
-$ homesick symlink setup
+$ homesick clone henrikbjorn/castle
+$ homesick symlink henrikbjorn/castle
 ```
 
 To install the plugins and bundles that is used open Vim and run the following commands.
