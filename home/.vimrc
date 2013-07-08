@@ -2,17 +2,22 @@
 set nocompatible
 filetype off
 
-" Vundle
-set rtp+=$HOME/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-Bundle 'gmarik/vundle'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'godlygeek/tabular'
-Bundle 'scrooloose/syntastic'
-Bundle '2072/PHP-Indenting-for-VIm'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rodjek/vim-puppet'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle '2072/PHP-Indenting-for-VIm'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'bling/vim-airline'
 
 " modelines
 set modeline
@@ -130,6 +135,9 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|\.hg|\.svn|CVS)$'
 
 " PHPSpec2
 let g:phpspec_executable = 'phpspec'
+
+" vim-airline
+let g:airline_theme='simple'
 
 " MatchIt
 runtime macros/matchit.vim

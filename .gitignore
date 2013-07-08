@@ -1,11 +1,13 @@
 .DS_Store
-
-vim/backup/*
-vim/temp/*
-vim/bundle/*
-
-vim/.VimballRecord
 .netrwhist
 
+home/.vim/backup
+home/.vim/temp
+home/.vim/bundle
+home/.vim/.VimballRecord
+
+home/.ssh/*
+
 !.gitkeep
-!vim/bundle/vundle
+!home/.vim/bundle/neobundle.vim
+!home/.ssh/config
