@@ -18,6 +18,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle '2072/PHP-Indenting-for-VIm'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-scripts/VisIncr'
 
 " modelines
 set modeline
@@ -114,6 +115,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " Jump to last edited line if valid
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " When editing use %% to expand to current directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
@@ -123,7 +125,7 @@ map <leader>m :!php %<CR>
 
 " Syntastic
 let g:syntastic_quiet_warnings=0
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['html'] }

@@ -10,6 +10,7 @@ source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/terminal.zsh
 source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/history.zsh
+source $HOME/.zsh/vagrant.zsh
 
 # We like vim
 export EDITOR="vim"
