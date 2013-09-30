@@ -1,3 +1,5 @@
+skip_global_compinit=1
+
 # zsh options
 setopt noglobalrcs
 setopt complete_in_word prompt_subst always_to_end correct_all

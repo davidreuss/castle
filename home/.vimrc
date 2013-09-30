@@ -117,11 +117,19 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" :make for smlnj
+autocmd FileType sml setlocal makeprg=/usr/local/smlnj/bin/sml\ '%'
+
 " When editing use %% to expand to current directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Run file
 map <leader>m :!php %<CR>
+map <leader>u :!phpunit %<CR>
+map <leader>r :make<CR>
+
+let php_sql_query=0
+unlet php_sql_query
 
 " Syntastic
 let g:syntastic_quiet_warnings=0
