@@ -9,5 +9,5 @@ home/.vim/.VimballRecord
 home/.ssh/*
 
 !.gitkeep
-!home/.vim/bundle/neobundle.vim
+!home/.vim/bundle/neobundle
 !home/.ssh/config
