@@ -16,6 +16,7 @@ NeoBundle '2072/PHP-Indenting-for-VIm'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-scripts/VisIncr'
+NeoBundle 'henrikbjorn/php.vim'
 
 " modelines
 set modeline
@@ -72,6 +73,7 @@ set nofoldenable
 set lazyredraw
 set noshowmatch
 set colorcolumn=120
+set winwidth=120
 
 " Preserve cursor position when moving up/down if posible
 set nostartofline
@@ -129,7 +131,7 @@ let php_sql_query=0
 unlet php_sql_query
 
 " Syntastic
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
