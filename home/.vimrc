@@ -8,15 +8,19 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-NeoBundle 'Shougo/vimproc'
+NeoBundleFetch 'Shougo/neobundle'
+
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle '2072/PHP-Indenting-for-VIm'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'vim-scripts/VisIncr'
-NeoBundle 'henrikbjorn/php.vim'
 
 " modelines
 set modeline
